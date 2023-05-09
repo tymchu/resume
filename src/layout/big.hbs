@@ -13,29 +13,8 @@
     <link href='css/index.css' rel='stylesheet' />
   </head>
 
-  <body>
-	{{#with header}}
-		<header>
-			<div>
-				<h1>{{name/firstname}} {{name/lastname}}</h1>
-			</div>
-			<div>
-				<b>{{position}}</b>
-			</div>
-			<br>
-			<div>
-				<em>{{salary}}</em>
-			</div>
-			<br>
-			<div>
-				<address>{{address}}</address>
-			</div>
-			<br>
-			<hr>
-		</header>
-	{{/with}}
-
-    {{> nav}}
+  <body>	
+	{{> nav}}
 
 	<br>
 	<hr>
@@ -44,9 +23,9 @@
     {{{body}}}
 
 	<br>
-
-	{{> footer}}		
 	
+	{{> footer}}
+		
   </body>
 
 </html>
