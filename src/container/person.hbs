@@ -6,8 +6,48 @@
 <div>
     {{#with person}}
         <div>
-            <h1>{{name}}</h1>
+            <h1><p>{{name}}<br>{{age}}<br>{{gender}}</p></h1>
         </div>
+        <strong>Address</strong>
+            <div>
+                <ul>
+                    {{#with address}}
+                        {{street}}, 
+                        {{city}}, 
+                        {{state}}, 
+                        {{zip}}, 
+                        {{country}}
+                    {{/with}}
+                </ul>
+            </div>
+        <strong>Education</strong>
+            <div>
+                <ul>
+                    {{#each education}}
+                        {{degree}}<br> 
+                        {{major}}<br> 
+                        {{university}}<br> 
+                        {{graduationYear}}<br>
+                    {{/each}}
+                </ul>
+            </div>
+        <strong>WorkExperience</strong>
+            <div>
+                <ul>
+                    {{#each workExperience}}
+                        <li>
+                            <div>{{title}}</div>
+                            <div>{{company}} ({{year_founded}}) {{industry}}</div>
+                            <div class='mb-3'> {{startData}} {{endData}}</div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        <strong>Responsibilities</strong>
+
+            
+        
     {{/with}}
 </div>
 
