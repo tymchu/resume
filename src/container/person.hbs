@@ -6,45 +6,69 @@
 <div>
     {{#with person}}
         <div>
-            <h1><p>{{name}}<br>{{age}}<br>{{gender}}</p></h1>
+            <h1><p>name: {{name}}<br>age: {{age}}<br>gender: {{gender}}</p></h1>
         </div>
-        <strong>Address</strong>
-            <div>
-                <ul>
-                    {{#with address}}
-                        {{street}}, 
-                        {{city}}, 
-                        {{state}}, 
-                        {{zip}}, 
-                        {{country}}
-                    {{/with}}
-                </ul>
-            </div>
-        <strong>Education</strong>
-            <div>
-                <ul>
-                    {{#each education}}
-                        {{degree}}<br> 
-                        {{major}}<br> 
-                        {{university}}<br> 
-                        {{graduationYear}}<br>
-                    {{/each}}
-                </ul>
-            </div>
-        <strong>WorkExperience</strong>
-            <div>
-                <ul>
-                    {{#each workExperience}}
-                        <li>
-                            <div>{{title}}</div>
-                            <div>{{company}} ({{year_founded}}) {{industry}}</div>
-                            <div class='mb-3'> {{startData}} {{endData}}</div>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
+            <hr>
+            {{#with address}}
+                {{> title data='Address' big=ture}}
+                <br>
+                <div>
+                {{street}}, {{city}}, {{state}}, {{zip}}, {{country}}
+                </div>
+            {{/with}}
+            <hr>
+        <section>
+            {{#each education}}
+                {{> title data="Education" big=true}}
+                <br>
+                    <div>
+                        <div><em>Degree: {{degree}}</em></div>
+                        <br>
+                        <div>Major: {{major}}</div>
+                        <br>
+                        <div>University: {{university}} {{graduationYear}}</div>
+                    </div>
+            {{/each}} 
+        </section>
+        <hr>
+        <br>
+        <section>
+            {{#each workExperience}}
+                {{> title data="WorkExperience" big=true}}
+                <br>
+                    <div>
+                        <div>company: {{company}}</div>
+                        <br>
+                        <div>title: {{title}}</div>
+                        <br>
+                        <div>startDate: {{startDate}} по {{endDate}}</div>
+                        <div><p>responsibilities: {{responsibilities}}</p></div>
+                        <div>year_founded:{{year_founded}}<br>industry:{{industry}}</div>
+                    </div>
+                    <br>
+                    <hr>
+                    <section>
+                        {{#each employees}}
+                            <strong>Employees</strong>
+                            <div>
+                            <br>
+                                <div>name:{{name}}</div>
+                                <div>position: {{position}}</div>
+                                <div>department: {{department}}</div>
+                               
+                            </div>
+                        {{/each}}
+                    </section>
+            {{/each}} 
+        </section>
 
-        <strong>Responsibilities</strong>
+
+        
+               
+            
+        
+        
+                   
 
             
         
