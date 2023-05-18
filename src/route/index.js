@@ -888,7 +888,7 @@ router.get('/mac', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
-    ayout: 'basic',
+    layout: 'basic',
 
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
@@ -982,7 +982,7 @@ router.get('/facebook', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
-    ayout: 'basic',
+    layout: 'basic',
 
     name: 'Facebook',
     users: [
@@ -1131,6 +1131,23 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/bootstrap', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
