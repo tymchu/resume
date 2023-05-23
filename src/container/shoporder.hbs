@@ -260,6 +260,41 @@
             </div>
             {{/with}}
         </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="nav flex-column">
+                        {{#each action_block}}
+                            <button type="button" class="btn my-2 {{#if isSuccess}}btn-success{{/if}} {{#if isDanger}}btn-danger{{/if}} {{#if isInfo}}btn-info{{/if}}">{{text}}</button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{#with total}}
+                <div class="card">
+                    <h3 class="ms-3 mt-3">{{title}}</h3>
+                    <div class="card-body">
+                        {{#each item_list}}
+                            <p>{{name}}: {{price}}</p>
+                        {{/each}}
+                    </div>
+                    <hr>
+                    {{#each additional_info}}
+                        <p class="ms-3">{{text}}: {{value}}</p>
+                    {{/each}}
+                    <hr>
+                    {{#with total_price}}
+                        <p class="ms-3">{{text}}: {{value}}</p>
+                    {{/with}}
+                    <hr>
+                    {{#each button}}
+                        <button class="btn mx-4 my-2 {{#if isPrimary}}btn-primary{{/if}} {{#if isOutline}}btn-outline-primary{{/if}}">
+                            {{text}}
+                        </button>
+                    {{/each}}
+                </div>
+            {{/with}}
+        </div>
          <hr>
     <footer>
         <div class="row">
