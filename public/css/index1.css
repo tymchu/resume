@@ -1,0 +1,56 @@
+:root {
+  background: purple;
+}
+
+html {
+  max-width: 750px;
+
+  background: blue;
+}
+
+body {
+  background: white;
+}
+
+* {
+  color: red;
+}
+
+h1 {
+  color: green;
+}
+
+.box {
+  background: #bab7b7;
+}
+
+#user {
+  color: blue;
+}
+
+h1, 
+h2#user, 
+button.button#button {
+  color: green;
+}
+
+#user, 
+.user {
+  color: blue;
+}
+
+#box > p {
+  color: aquamarine;
+}
+
+footer > .user {
+  color: chocolate;
+}
+
+footer > h1 {
+  color: chartreuse;
+}
+
+footer em {
+  color: rgb(117, 143, 100);
+}
