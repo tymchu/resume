@@ -207,3 +207,23 @@ input[type='checkbox']:checked ~ span {
 .valid:optional {
   background: green;
 }
+
+.number:focus {
+  background: gray;
+}
+
+.number:out-of-range {
+  background: red;
+}
+
+.number:in-range {
+  background: green;
+}
+
+.number:invalid {
+  background: yellow;
+}
+
+input:placeholder-shown ~ span {
+  background: pink;
+}
