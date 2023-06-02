@@ -46,3 +46,16 @@ span {
 
   font-style: italic;
 }
+
+.test {
+  display: none;
+}
+
+.block {
+  display: block;
+  color: white;
+  background: black;
+  margin: auto;
+
+  width: 155px;
+}
