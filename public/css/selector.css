@@ -19,13 +19,30 @@ p:hover {
   -webkit-text-stroke: unset;
 
   text-align: center;
+  font-style: italic;
 }
 
 span {
   text-align: left;
   text-transform: uppercase;
+  font-style: italic;
 }
 
 pre {
   tab-size: 5;
+  font-style: oblique;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+span {
+  font-size: larger;
+
+  font-weight: lighter;
+
+  font-style: italic;
 }
