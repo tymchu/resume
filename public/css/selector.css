@@ -57,5 +57,5 @@ span {
   background: black;
   margin: auto;
 
-  width: 155px;
+  height: min-content;
 }
